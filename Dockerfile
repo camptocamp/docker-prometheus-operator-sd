@@ -7,4 +7,6 @@ RUN apt-get update && apt-get -y install \
 
 COPY prometheus-operator-sd.sh /
 
+USER 1001
+
 ENTRYPOINT /prometheus-operator-sd.sh
