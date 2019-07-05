@@ -1,7 +1,6 @@
 #!/bin/sh -e
 
-ENDPOINT=$1
-OUTPUT=${2:-/dev/stdout}
+OUTPUT=${OUTPUT:-/dev/stdout}
 
 while true; do
 	echo --- > "$OUTPUT"

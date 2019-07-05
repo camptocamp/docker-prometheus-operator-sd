@@ -7,7 +7,7 @@ can use as a file in a file_sd_config scrape config.
 Run this container and dump the output in a file:
 
 ```shell
-$ docker run -e AUTH_TOKEN=<bearer_token> -v <file_sd_dir>:/output camptocamp/prometheus-operator-sd <api_endpoint> /output/targets.yml
+$ docker run -e ENDPOINT=<api_endpoint> -e OUTPUT=/output/targets.yml -e AUTH_TOKEN=<bearer_token> -v <file_sd_dir>:/output camptocamp/prometheus-operator-sd
 $ docker run -v <file_sd_vol>:/etc/prometheus/k8s-federate prom/prometheus
 ```
 
