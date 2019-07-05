@@ -7,6 +7,10 @@ RUN apt-get update && apt-get -y install \
 
 COPY prometheus-operator-sd.sh /
 
+RUN mkdir /output && chown 1001.root /output && chmod g=u /output
+
+VOLUME /output
+
 USER 1001
 
 ENTRYPOINT /prometheus-operator-sd.sh
