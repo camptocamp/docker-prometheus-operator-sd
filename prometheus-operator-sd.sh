@@ -9,7 +9,7 @@ while true; do
 		target=${target%/}
 		cat <<EOF>>"$OUTPUT"
 - targets:
-    - $ENDPOINT
+    - $target
   labels:
     service: $prometheus
     namespace: $namespace
